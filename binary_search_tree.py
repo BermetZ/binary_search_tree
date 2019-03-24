@@ -3,19 +3,16 @@ class Node:
         self.value = value
         self.left = None
         self.right = None
-        self.parent = None
 
     def insert(self, node):
         if node.value < self.value:
             if self.left is None:
                 self.left = node
-                node.parent = self
             else:
                 self.left.insert(node)
         elif node.value > self.value:
             if self.right is None:
                 self.right = node
-                node.parent = self
             else:
                 self.right.insert(node)
 
